@@ -1,0 +1,1550 @@
+<!DOCTYPE html><html lang="en"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veteran Help's VA Statement Writing Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --bg: #F5F0E8;
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #EDE8DD;
+    --bg-input: #FDFCFA;
+    --text: #2C2416;
+    --text-secondary: #6B5D4A;
+    --text-muted: #9A8C78;
+    --primary: #2D5016;
+    --primary-light: #3A6B1E;
+    --primary-bg: #E8F0E2;
+    --accent: #C9A84C;
+    --accent-light: #D4BA6A;
+    --accent-bg: #FDF8EC;
+    --border: #D9D0C1;
+    --border-light: #E8E0D4;
+    --danger: #B54444;
+    --danger-bg: #FDECEC;
+    --success: #2D7A3A;
+    --success-bg: #E6F4E8;
+    --shadow-sm: 0 1px 3px rgba(44,36,22,0.06);
+    --shadow-md: 0 4px 12px rgba(44,36,22,0.08);
+    --shadow-lg: 0 8px 30px rgba(44,36,22,0.12);
+    --radius: 12px;
+    --radius-lg: 16px;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  html.dark {
+    --bg: #1A1D17;
+    --bg-card: #252A20;
+    --bg-card-alt: #2E3428;
+    --bg-input: #1E2319;
+    --text: #E8E0D4;
+    --text-secondary: #B0A690;
+    --text-muted: #7A7060;
+    --primary: #6BBF3A;
+    --primary-light: #7ED44E;
+    --primary-bg: #2A3522;
+    --accent: #D4BA6A;
+    --accent-light: #E0CC88;
+    --accent-bg: #3A3420;
+    --border: #3A4032;
+    --border-light: #2E3428;
+    --danger: #E06060;
+    --danger-bg: #3A2222;
+    --success: #4CAF50;
+    --success-bg: #223A24;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.4);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Merriweather', serif; line-height: 1.3; }
+
+  .app-header {
+    background: var(--primary);
+    color: #fff;
+    padding: 16px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+  }
+  html.dark .app-header { background: #1E2819; }
+
+  .app-header h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .app-header .subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 2px;
+    font-weight: 400;
+  }
+
+  .progress-bar-container {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    padding: 12px 20px 14px;
+    position: sticky;
+    top: 62px;
+    z-index: 99;
+  }
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .progress-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .progress-step {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .progress-track {
+    width: 100%;
+    height: 6px;
+    background: var(--border-light);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 16px 100px;
+  }
+
+  .step-section {
+    display: none;
+    animation: fadeSlideIn 0.4s ease;
+  }
+  .step-section.active { display: block; }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .card-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .welcome-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--primary-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: var(--primary);
+  }
+
+  .type-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .type-btn {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+  }
+  .type-btn:hover, .type-btn:focus {
+    border-color: var(--primary);
+    background: var(--primary-bg);
+    box-shadow: var(--shadow-md);
+    outline: none;
+  }
+  .type-btn .type-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary);
+  }
+  .type-btn .type-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .type-btn .type-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+  .form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .form-label .optional {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+  .form-input, .form-select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-input);
+    color: var(--text);
+    transition: var(--transition);
+    -webkit-appearance: none;
+  }
+  .form-input:focus, .form-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45,80,22,0.12);
+  }
+  html.dark .form-input:focus, html.dark .form-select:focus {
+    box-shadow: 0 0 0 3px rgba(107,191,58,0.2);
+  }
+  .form-textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-input);
+    color: var(--text);
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.7;
+    transition: var(--transition);
+  }
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(45,80,22,0.12);
+  }
+  html.dark .form-textarea:focus {
+    box-shadow: 0 0 0 3px rgba(107,191,58,0.2);
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-input);
+  }
+  .checkbox-item:hover {
+    border-color: var(--primary);
+    background: var(--primary-bg);
+  }
+  .checkbox-item.checked {
+    border-color: var(--primary);
+    background: var(--primary-bg);
+  }
+  .checkbox-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    accent-color: var(--primary);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .checkbox-label {
+    flex: 1;
+  }
+  .checkbox-label .cb-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: block;
+  }
+  .checkbox-label .cb-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  .tip-box {
+    background: var(--accent-bg);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .tip-box .tip-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  html.dark .tip-box .tip-title { color: var(--accent-light); }
+
+  .warning-box {
+    background: var(--danger-bg);
+    border: 1px solid var(--danger);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .warning-box .warning-title {
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .example-box {
+    background: var(--bg-card-alt);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  .example-box strong {
+    color: var(--text);
+    font-style: normal;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    position: sticky;
+    bottom: 0;
+    background: var(--bg);
+    padding: 16px 0 20px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .btn {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    flex: 1;
+  }
+  .btn-primary:hover:not(:disabled) { background: var(--primary-light); }
+  .btn-secondary {
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1.5px solid var(--border);
+    flex: 0 0 auto;
+    padding: 14px 20px;
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background: var(--bg-card-alt);
+    border-color: var(--text-muted);
+  }
+  .btn-accent {
+    background: var(--accent);
+    color: #2C2416;
+  }
+  .btn-accent:hover:not(:disabled) { background: var(--accent-light); }
+  .btn-sm {
+    padding: 10px 16px;
+    font-size: 0.88rem;
+  }
+
+  .signature-area {
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    touch-action: none;
+  }
+  html.dark .signature-area { background: #fafaf6; }
+
+  .signature-area canvas {
+    display: block;
+    width: 100%;
+    cursor: crosshair;
+  }
+  .signature-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    font-size: 0.95rem;
+    pointer-events: none;
+    text-align: center;
+    width: 90%;
+  }
+  .signature-placeholder.hidden { display: none; }
+  .sig-line {
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+    border-bottom: 1px solid #ddd;
+  }
+  .sig-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    background: var(--bg-card-alt);
+  }
+
+  .review-section {
+    background: var(--bg-card-alt);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 12px 0;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--primary-bg), var(--accent-bg));
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  html.dark .ai-badge { color: var(--primary); }
+
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 30px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .section-divider {
+    border: none;
+    height: 1px;
+    background: var(--border-light);
+    margin: 20px 0;
+  }
+
+  .inline-flex { display: flex; gap: 12px; }
+  .inline-flex > * { flex: 1; }
+
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .tag-onset { background: #E3F2FD; color: #1565C0; }
+  .tag-continuity { background: #FFF3E0; color: #E65100; }
+  .tag-severity { background: #FCE4EC; color: #C62828; }
+  html.dark .tag-onset { background: #1A2A3A; color: #64B5F6; }
+  html.dark .tag-continuity { background: #3A2A1A; color: #FFB74D; }
+  html.dark .tag-severity { background: #3A1A1A; color: #EF9A9A; }
+
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-backdrop.show { display: flex; }
+  .modal-content {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+  .modal-content h3 { margin-bottom: 10px; font-size: 1.1rem; }
+  .modal-content p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+  .modal-buttons { display: flex; gap: 10px; justify-content: center; }
+
+  .toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--success);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 300;
+    pointer-events: none;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 14px 12px 100px; }
+    .card { padding: 18px 14px; }
+    .card-title { font-size: 1.1rem; }
+    .nav-buttons { padding: 12px 0 16px; }
+    .inline-flex { flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <h1>VA Statement Writing Guide</h1>
+  <div class="subtitle">We'll walk you through it, step by step</div>
+</header>
+
+<div class="progress-bar-container" id="progressContainer" style="display:none;">
+  <div class="progress-info">
+    <span class="progress-label" id="progressLabel">Getting Started</span>
+    <span class="progress-step" id="progressStep">Step 1 of 6</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- STEP 0: Welcome / Choose Type -->
+  <div class="step-section active" id="step-0">
+    <div class="card" style="text-align:center;">
+      <div class="welcome-icon"><i class="fas fa-shield-halved"></i></div>
+      <h2 class="card-title">Welcome</h2>
+      <p class="card-desc">This tool will guide you through writing a powerful statement to support a VA disability claim. Pick the type of statement you need to write.</p>
+    </div>
+    <div class="type-selector">
+      <button class="type-btn" onclick="selectType('lay')">
+        <div class="type-icon"><i class="fas fa-user-pen"></i></div>
+        <div class="type-title">Lay Statement</div>
+        <div class="type-desc">I am the veteran writing about my own experience, symptoms, and limitations.</div>
+      </button>
+      <button class="type-btn" onclick="selectType('buddy')">
+        <div class="type-icon"><i class="fas fa-people-arrows"></i></div>
+        <div class="type-title">Buddy Statement</div>
+        <div class="type-desc">I am a friend, family member, spouse, or fellow service member writing to support a veteran's claim.</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 1: Personal Info (Lay) -->
+  <div class="step-section" id="step-lay-1">
+    <div class="card">
+      <h2 class="card-title">Your Information</h2>
+      <p class="card-desc">Let's start with some basic details. This information will appear on your completed statement.</p>
+      <div class="form-group">
+        <label class="form-label" for="layVetName">Your Full Legal Name</label>
+        <input class="form-input" type="text" id="layVetName" placeholder="e.g., John Michael Smith" autocomplete="name">
+      </div>
+      <div class="inline-flex">
+        <div class="form-group">
+          <label class="form-label" for="layBranch">Branch of Service</label>
+          <select class="form-select" id="layBranch">
+            <option value="">Select...</option>
+            <option>Army</option>
+            <option>Navy</option>
+            <option>Air Force</option>
+            <option>Marine Corps</option>
+            <option>Coast Guard</option>
+            <option>Space Force</option>
+            <option>National Guard</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="layServiceDates">Service Dates <span class="optional">(approx.)</span></label>
+          <input class="form-input" type="text" id="layServiceDates" placeholder="e.g., 2005 – 2013">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="layCondition">What condition is this statement about?</label>
+        <input class="form-input" type="text" id="layCondition" placeholder="e.g., knee injury, PTSD, migraines">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Personal Info (Buddy) -->
+  <div class="step-section" id="step-buddy-1">
+    <div class="card">
+      <h2 class="card-title">Your Information</h2>
+      <p class="card-desc">Tell us about yourself and your relationship to the veteran.</p>
+      <div class="form-group">
+        <label class="form-label" for="buddyName">Your Full Legal Name</label>
+        <input class="form-input" type="text" id="buddyName" placeholder="e.g., Jane A. Doe" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="buddyRelation">Your Relationship to the Veteran</label>
+        <input class="form-input" type="text" id="buddyRelation" placeholder="e.g., spouse, fellow Marine, childhood friend, coworker">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="buddyHowKnow">How and when did you come to know the veteran?</label>
+        <textarea class="form-textarea" id="buddyHowKnow" rows="3" style="min-height:90px;" placeholder="e.g., We served in the same platoon at Camp Pendleton from 2006 to 2009. We were stationed together for 3 years."></textarea>
+      </div>
+      <hr class="section-divider">
+      <div class="form-group">
+        <label class="form-label" for="buddyVetName">Veteran's Full Name</label>
+        <input class="form-input" type="text" id="buddyVetName" placeholder="Full legal name of the veteran you are supporting">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="buddyCondition">What condition is this statement about?</label>
+        <input class="form-input" type="text" id="buddyCondition" placeholder="e.g., knee injury, PTSD, migraines">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: Focus Areas -->
+  <div class="step-section" id="step-2">
+    <div class="card">
+      <h2 class="card-title">What Should This Statement Cover?</h2>
+      <p class="card-desc" id="focusDesc">Select one or more areas to focus on. We'll guide you through each one.</p>
+      <div class="checkbox-group">
+        <label class="checkbox-item" id="cb-onset">
+          <input type="checkbox" value="onset" onchange="toggleCheckbox(this)">
+          <div class="checkbox-label">
+            <span class="tag tag-onset">Onset</span>
+            <span class="cb-title">When symptoms started</span>
+            <span class="cb-desc" id="onsetCbDesc">Describe when the symptoms first appeared and what caused them.</span>
+          </div>
+        </label>
+        <label class="checkbox-item" id="cb-continuity">
+          <input type="checkbox" value="continuity" onchange="toggleCheckbox(this)">
+          <div class="checkbox-label">
+            <span class="tag tag-continuity">Continuity</span>
+            <span class="cb-title">Problems over time</span>
+            <span class="cb-desc" id="contCbDesc">Explain how the symptoms have continued from the beginning to now.</span>
+          </div>
+        </label>
+        <label class="checkbox-item" id="cb-severity">
+          <input type="checkbox" value="severity" onchange="toggleCheckbox(this)">
+          <div class="checkbox-label">
+            <span class="tag tag-severity">Severity</span>
+            <span class="cb-title">How bad things are</span>
+            <span class="cb-desc" id="sevCbDesc">Describe how severe the symptoms are and how they limit daily life and work.</span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="tip-box">
+      <div class="tip-title"><i class="fas fa-lightbulb"></i> Tip</div>
+      <span id="focusTip">If your claims team asked you to focus on specific areas, select only those. If you're not sure, select all three for the most complete statement.</span>
+    </div>
+  </div>
+
+  <!-- STEP 3: Onset Writing -->
+  <div class="step-section" id="step-onset">
+    <div class="card">
+      <span class="tag tag-onset">Onset</span>
+      <h2 class="card-title" id="onsetTitle">When Your Symptoms Started</h2>
+      <p class="card-desc" id="onsetDesc">Tell the VA when your symptoms started. Include specific details — dates, events, locations — anything that helps paint the picture.</p>
+
+      <div class="tip-box">
+        <div class="tip-title"><i class="fas fa-lightbulb"></i> Think about this</div>
+        <span id="onsetPrompt">What happened? Where were you? What did it feel like? If you didn't go to medical, why not?</span>
+      </div>
+
+      <div class="example-box" id="onsetExamples">
+        <strong>Examples to help get you started:</strong>
+        "I had multiple hard parachute landings during training, and my knees and neck started hurting."<br><br>
+        "After I got back from deployment, I would feel angry and short-tempered for no good reason."<br><br>
+        "I didn't go to sick call because my sergeant said it would hold up the unit."
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="onsetText">Your Onset Statement</label>
+        <textarea class="form-textarea" id="onsetText" rows="8" placeholder="Write in your own words. Be honest and specific..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4: Continuity Writing -->
+  <div class="step-section" id="step-continuity">
+    <div class="card">
+      <span class="tag tag-continuity">Continuity</span>
+      <h2 class="card-title" id="contTitle">Problems Over Time</h2>
+      <p class="card-desc" id="contDesc">Tell the VA how your symptoms continued from when they started until now. This is especially important if there are gaps in your medical records.</p>
+
+      <div class="tip-box">
+        <div class="tip-title"><i class="fas fa-lightbulb"></i> Think about this</div>
+        <span id="contPrompt">Did symptoms get better or worse? Did you see any doctors, use home remedies, or just push through? Why didn't you seek treatment?</span>
+      </div>
+
+      <div class="example-box" id="contExamples">
+        <strong>Examples to help get you started:</strong>
+        "My knees never got better after service, but I couldn't afford to go to the doctor and didn't have insurance."<br><br>
+        "I saw a chiropractor sometimes when my back made me miss work, but that was expensive."<br><br>
+        "I never sorted out my anger or anxiety, just kept stuffing it down over the years until it got too bad to deal with on my own."
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="continuityText">Your Continuity Statement</label>
+        <textarea class="form-textarea" id="continuityText" rows="8" placeholder="Write in your own words. Be honest and specific..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5: Severity Writing -->
+  <div class="step-section" id="step-severity">
+    <div class="card">
+      <span class="tag tag-severity">Severity</span>
+      <h2 class="card-title" id="sevTitle">How Bad Things Are</h2>
+      <p class="card-desc" id="sevDesc">Tell the VA how severe your symptoms are right now and how they limit you — especially how they get in the way of work or daily activities.</p>
+
+      <div class="tip-box">
+        <div class="tip-title"><i class="fas fa-lightbulb"></i> Think about this</div>
+        <span id="sevPrompt">What can't you do that you used to? How do your symptoms affect your job, relationships, or daily routine? How often are symptoms at their worst?</span>
+      </div>
+
+      <div class="example-box" id="sevExamples">
+        <strong>Examples to help get you started:</strong>
+        "I get so anxious having to deal with customers that sometimes I call out sick so I don't have to deal with anyone."<br><br>
+        "My headaches get so bad about once a month that I have to lie down in a dark room for hours."<br><br>
+        "The nerve pain down my legs is there all the time. It makes it hard to stand up after sitting."
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="severityText">Your Severity Statement</label>
+        <textarea class="form-textarea" id="severityText" rows="8" placeholder="Write in your own words. Be honest and specific..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6: Review -->
+  <div class="step-section" id="step-review">
+    <div class="card">
+      <h2 class="card-title">Review Your Statement</h2>
+      <p class="card-desc">Here is your complete statement. Read through it carefully. You can go back to edit any section, or use the AI assistant to help polish the language.</p>
+      <div class="review-section" id="reviewContent"></div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
+        <h3 style="font-size:1rem;">AI Writing Assistant</h3>
+        <span class="ai-badge"><i class="fas fa-wand-magic-sparkles"></i> Optional</span>
+      </div>
+      <p class="card-desc">Want help making your statement clearer and more detailed? Our AI assistant can suggest improvements while keeping your voice and your story. It will never change the facts — only help you express them better.</p>
+      <button class="btn btn-accent btn-sm" id="aiPolishBtn" onclick="aiPolish()">
+        <i class="fas fa-wand-magic-sparkles"></i> Polish My Statement
+      </button>
+      <div id="aiResult" style="display:none; margin-top:16px;">
+        <div class="loading-overlay" id="aiLoading">
+          <div class="loading-spinner"></div>
+          <div>Reviewing your statement...</div>
+        </div>
+        <div id="aiOutput" style="display:none;">
+          <label class="form-label">Suggested Revision:</label>
+          <div class="review-section" id="aiText" style="border:2px solid var(--primary); background:var(--primary-bg);"></div>
+          <div style="display:flex; gap:10px; margin-top:12px;">
+            <button class="btn btn-primary btn-sm" onclick="acceptAI()"><i class="fas fa-check"></i> Use This Version</button>
+            <button class="btn btn-secondary btn-sm" onclick="rejectAI()"><i class="fas fa-times"></i> Keep My Original</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <div class="warning-title"><i class="fas fa-triangle-exclamation"></i> Important Reminder</div>
+      Be honest and accurate. Exaggeration can hurt your credibility, while downplaying your limitations can keep you from getting the benefits you deserve. Go for the middle ground.
+    </div>
+  </div>
+
+  <!-- STEP 7: Sign & Date -->
+  <div class="step-section" id="step-sign">
+    <div class="card">
+      <h2 class="card-title">Sign Your Statement</h2>
+      <p class="card-desc">Use your finger or mouse to draw your signature below. This makes your statement official.</p>
+      <div class="form-group">
+        <label class="form-label">Signature</label>
+        <div class="signature-area" id="sigArea">
+          <canvas id="sigCanvas" height="180"></canvas>
+          <div class="sig-line"></div>
+          <div class="signature-placeholder" id="sigPlaceholder">
+            <i class="fas fa-pen-fancy" style="font-size:1.5rem; display:block; margin-bottom:6px;"></i>
+            Sign here with your finger or mouse
+          </div>
+        </div>
+        <div class="sig-actions">
+          <button class="btn btn-secondary btn-sm" onclick="clearSignature()"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+      </div>
+      <div class="inline-flex">
+        <div class="form-group">
+          <label class="form-label" for="sigPrintName">Print Name</label>
+          <input class="form-input" type="text" id="sigPrintName" placeholder="Your printed name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="sigDate">Date</label>
+          <input class="form-input" type="date" id="sigDate">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 8: Download / Done -->
+  <div class="step-section" id="step-done">
+    <div class="card" style="text-align:center;">
+      <div class="welcome-icon" style="background:var(--success-bg); color:var(--success);">
+        <i class="fas fa-circle-check"></i>
+      </div>
+      <h2 class="card-title">Your Statement is Complete!</h2>
+      <p class="card-desc">Download your signed statement below. You can submit it to your claims team by email, mail, or fax.</p>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px; align-items:center;">
+        <button class="btn btn-primary" onclick="downloadStatement()" style="width:100%;max-width:320px;">
+          <i class="fas fa-download"></i> Download Statement
+        </button>
+        <button class="btn btn-secondary" onclick="copyStatement()" style="width:100%;max-width:320px;">
+          <i class="fas fa-copy"></i> Copy to Clipboard
+        </button>
+      </div>
+
+      <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--border-light); text-align:left;">
+        <h4 style="font-size:0.95rem; margin-bottom:8px;">Submit your statement to:</h4>
+        <div style="font-size:0.88rem; color:var(--text-secondary); line-height:1.8;">
+          <div><i class="fas fa-envelope" style="width:20px;"></i> <strong>Email:</strong> customerservice@veteranhelp.com</div>
+          <div><i class="fas fa-location-dot" style="width:20px;"></i> <strong>Mail:</strong> 43 North 470 West, American Fork, UT 84003</div>
+          <div><i class="fas fa-fax" style="width:20px;"></i> <strong>Fax:</strong> 801-435-8225</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:16px;">
+      <button class="btn btn-secondary btn-sm" onclick="startOver()"><i class="fas fa-rotate-left"></i> Write Another Statement</button>
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons" id="navButtons" style="display:none;">
+    <button class="btn btn-secondary" id="backBtn" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+    <button class="btn btn-primary" id="nextBtn" onclick="goNext()">Next <i class="fas fa-arrow-right"></i></button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Missing Information</h3>
+    <p id="modalMessage">Please fill in the required fields before continuing.</p>
+    <div class="modal-buttons">
+      <button class="btn btn-primary btn-sm" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  "use strict";
+
+  // Dark mode detection
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.documentElement.classList.add("dark");
+  }
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(event) {
+    if (event.matches) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  });
+
+  // State
+  var state = {
+    type: null,
+    currentStep: "0",
+    focusAreas: [],
+    aiPolishedText: null,
+    signatureData: null,
+    hasSigned: false
+  };
+
+  // Step flows
+  function getStepFlow() {
+    var prefix = state.type === "lay" ? "lay" : "buddy";
+    var steps = ["0", prefix + "-1", "2"];
+    state.focusAreas.forEach(function(area) {
+      steps.push(area);
+    });
+    steps.push("review", "sign", "done");
+    return steps;
+  }
+
+  function getStepLabels() {
+    var labels = {
+      "0": "Choose Statement Type",
+      "lay-1": "Your Information",
+      "buddy-1": "Your Information",
+      "2": "Focus Areas",
+      "onset": "When Symptoms Started",
+      "continuity": "Problems Over Time",
+      "severity": "How Bad Things Are",
+      "review": "Review Your Statement",
+      "sign": "Sign & Date",
+      "done": "Complete"
+    };
+    return labels;
+  }
+
+  // Show/hide sections
+  function showStep(stepId) {
+    var all = document.querySelectorAll(".step-section");
+    all.forEach(function(el) { el.classList.remove("active"); });
+
+    var target = document.getElementById("step-" + stepId);
+    if (target) { target.classList.add("active"); }
+
+    state.currentStep = stepId;
+    updateProgress();
+    updateNav();
+    updateBuddyContent();
+
+    if (stepId === "review") { buildReview(); }
+    if (stepId === "sign") { initSignature(); prefillSign(); }
+    if (stepId === "done") { /* nothing extra */ }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function updateProgress() {
+    var flow = getStepFlow();
+    var idx = flow.indexOf(state.currentStep);
+    var container = document.getElementById("progressContainer");
+    var labels = getStepLabels();
+
+    if (state.currentStep === "0") {
+      container.style.display = "none";
+      return;
+    }
+
+    container.style.display = "block";
+    var total = flow.length - 1; // exclude "0" and "done"
+    var current = idx;
+    var pct = Math.min(100, Math.round((current / (flow.length - 1)) * 100));
+
+    document.getElementById("progressFill").style.width = pct + "%";
+    document.getElementById("progressLabel").textContent = labels[state.currentStep] || "";
+    document.getElementById("progressStep").textContent = "Step " + idx + " of " + (flow.length - 1);
+  }
+
+  function updateNav() {
+    var nav = document.getElementById("navButtons");
+    var nextBtn = document.getElementById("nextBtn");
+    var backBtn = document.getElementById("backBtn");
+
+    if (state.currentStep === "0" || state.currentStep === "done") {
+      nav.style.display = "none";
+      return;
+    }
+
+    nav.style.display = "flex";
+    var flow = getStepFlow();
+    var idx = flow.indexOf(state.currentStep);
+
+    backBtn.style.display = idx > 0 ? "" : "none";
+
+    if (state.currentStep === "sign") {
+      nextBtn.innerHTML = '<i class="fas fa-check"></i> Finish & Download';
+    } else {
+      nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right"></i>';
+    }
+  }
+
+  // Update content for buddy version
+  function updateBuddyContent() {
+    if (state.type !== "buddy") { return; }
+
+    document.getElementById("onsetTitle").textContent = "When You Saw Symptoms Start";
+    document.getElementById("onsetDesc").textContent = "Describe when you first noticed the veteran's symptoms or when you witnessed the event that caused them. Include specific details — dates, events, locations.";
+    document.getElementById("onsetPrompt").textContent = "Were you there when it happened? Did you see the veteran change? When did you first notice something was wrong?";
+    document.getElementById("onsetExamples").innerHTML =
+      '<strong>Examples to help get you started:</strong>' +
+      '"I was in the same unit when he had a hard parachute landing during training. I saw him limping for weeks afterward."<br><br>' +
+      '"When my husband came back from deployment, I noticed he was a completely different person — angry, withdrawn, and jumping at every loud noise."<br><br>' +
+      '"I worked with her starting in 2012 and she was already complaining about constant back pain from her time in the service."';
+
+    document.getElementById("contTitle").textContent = "Problems You Witnessed Over Time";
+    document.getElementById("contDesc").textContent = "Describe how you saw the veteran's symptoms continue over time. This is especially valuable if there are gaps in the veteran's medical records.";
+    document.getElementById("contPrompt").textContent = "Did symptoms get better or worse over the years? What did you see them go through? Did you see them avoid activities or struggle with daily tasks?";
+    document.getElementById("contExamples").innerHTML =
+      '<strong>Examples to help get you started:</strong>' +
+      '"Over the years I watched him struggle to do yard work. He would need to stop and sit down every few minutes because of his back."<br><br>' +
+      '"She stopped going to family gatherings. For years she would cancel plans last minute or just not show up."<br><br>' +
+      '"I\'ve known him since he got out in 2009 and his knee has never been right. He always limps worse on cold days."';
+
+    document.getElementById("sevTitle").textContent = "How Bad Things Are Now";
+    document.getElementById("sevDesc").textContent = "Describe what you see currently — how the veteran's symptoms limit them in daily life, at work, or in relationships.";
+    document.getElementById("sevPrompt").textContent = "What can you see from the outside? What have they had to stop doing? How does it affect their work, their family, their daily routine?";
+    document.getElementById("sevExamples").innerHTML =
+      '<strong>Examples to help get you started:</strong>' +
+      '"He can barely play with his kids. He has to lie down after 20 minutes of any activity."<br><br>' +
+      '"She calls me at night unable to sleep because the anxiety is so bad. I\'ve seen her have panic attacks in public."<br><br>' +
+      '"He\'s missed family events, stopped accepting invitations, and barely leaves the house on bad days."';
+
+    document.getElementById("focusDesc").textContent = "Select what you can speak to from what you personally witnessed. Only choose areas where you have direct knowledge.";
+    document.getElementById("onsetCbDesc").textContent = "You saw or were told about when the symptoms first started.";
+    document.getElementById("contCbDesc").textContent = "You saw the symptoms continue over months or years.";
+    document.getElementById("sevCbDesc").textContent = "You can describe how bad the symptoms are and how they limit the veteran.";
+    document.getElementById("focusTip").textContent = "You can only testify about what you personally witnessed — not what you've been told happened. Focus on what you saw, heard, or experienced firsthand.";
+  }
+
+  // Checkbox toggle
+  window.toggleCheckbox = function(el) {
+    var parent = el.closest(".checkbox-item");
+    if (el.checked) {
+      parent.classList.add("checked");
+    } else {
+      parent.classList.remove("checked");
+    }
+  };
+
+  // Select statement type
+  window.selectType = function(type) {
+    state.type = type;
+    showStep(type === "lay" ? "lay-1" : "buddy-1");
+  };
+
+  // Navigation
+  window.goNext = function() {
+    if (!validateCurrentStep()) { return; }
+
+    var flow = getStepFlow();
+    var idx = flow.indexOf(state.currentStep);
+
+    // If on step 2 (focus areas), rebuild the flow
+    if (state.currentStep === "2") {
+      collectFocusAreas();
+      if (state.focusAreas.length === 0) {
+        showModal("Select at Least One", "Please select at least one focus area (Onset, Continuity, or Severity) for your statement.");
+        return;
+      }
+      var newFlow = getStepFlow();
+      var nextStep = newFlow[newFlow.indexOf("2") + 1];
+      showStep(nextStep);
+      return;
+    }
+
+    if (idx < flow.length - 1) {
+      showStep(flow[idx + 1]);
+    }
+  };
+
+  window.goBack = function() {
+    var flow = getStepFlow();
+    var idx = flow.indexOf(state.currentStep);
+    if (idx > 0) {
+      showStep(flow[idx - 1]);
+    }
+  };
+
+  function collectFocusAreas() {
+    state.focusAreas = [];
+    var checks = document.querySelectorAll("#step-2 input[type='checkbox']");
+    checks.forEach(function(cb) {
+      if (cb.checked) {
+        state.focusAreas.push(cb.value);
+      }
+    });
+  }
+
+  // Validation
+  function validateCurrentStep() {
+    var step = state.currentStep;
+    if (step === "lay-1") {
+      var name = document.getElementById("layVetName").value.trim();
+      var condition = document.getElementById("layCondition").value.trim();
+      if (!name) {
+        showModal("Name Required", "Please enter your full legal name.");
+        return false;
+      }
+      if (!condition) {
+        showModal("Condition Required", "Please enter the condition this statement is about.");
+        return false;
+      }
+      return true;
+    }
+    if (step === "buddy-1") {
+      var bname = document.getElementById("buddyName").value.trim();
+      var vname = document.getElementById("buddyVetName").value.trim();
+      var cond = document.getElementById("buddyCondition").value.trim();
+      if (!bname) { showModal("Name Required", "Please enter your full legal name."); return false; }
+      if (!vname) { showModal("Veteran Name Required", "Please enter the veteran's full name."); return false; }
+      if (!cond) { showModal("Condition Required", "Please enter the condition this statement is about."); return false; }
+      return true;
+    }
+    if (step === "onset" || step === "continuity" || step === "severity") {
+      var textId = step === "onset" ? "onsetText" : step === "continuity" ? "continuityText" : "severityText";
+      var text = document.getElementById(textId).value.trim();
+      if (!text) {
+        showModal("Please Write Something", "This section needs your input before you can continue. Even a few sentences help.");
+        return false;
+      }
+      return true;
+    }
+    if (step === "sign") {
+      if (!state.hasSigned) {
+        showModal("Signature Required", "Please sign your name in the signature box.");
+        return false;
+      }
+      var printName = document.getElementById("sigPrintName").value.trim();
+      var sigDate = document.getElementById("sigDate").value;
+      if (!printName) { showModal("Print Name", "Please type your printed name."); return false; }
+      if (!sigDate) { showModal("Date Required", "Please enter today's date."); return false; }
+      return true;
+    }
+    return true;
+  }
+
+  // Modal
+  function showModal(title, message) {
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalMessage").textContent = message;
+    document.getElementById("modal").classList.add("show");
+  }
+  window.closeModal = function() {
+    document.getElementById("modal").classList.remove("show");
+  };
+
+  // Toast
+  function showToast(msg) {
+    var toast = document.getElementById("toast");
+    toast.textContent = msg;
+    toast.classList.add("show");
+    setTimeout(function() { toast.classList.remove("show"); }, 2500);
+  }
+
+  // Build Review
+  function buildReview() {
+    var lines = [];
+    var isLay = state.type === "lay";
+    var title = isLay ? "LAY STATEMENT" : "BUDDY STATEMENT";
+    var vetName = isLay
+      ? document.getElementById("layVetName").value.trim()
+      : document.getElementById("buddyVetName").value.trim();
+    var condition = isLay
+      ? document.getElementById("layCondition").value.trim()
+      : document.getElementById("buddyCondition").value.trim();
+
+    lines.push(title);
+    lines.push("─".repeat(40));
+    lines.push("");
+
+    if (isLay) {
+      lines.push("Veteran: " + vetName);
+      var branch = document.getElementById("layBranch").value;
+      var dates = document.getElementById("layServiceDates").value.trim();
+      if (branch) { lines.push("Branch: " + branch); }
+      if (dates) { lines.push("Service Dates: " + dates); }
+      lines.push("Condition: " + condition);
+    } else {
+      lines.push("Statement By: " + document.getElementById("buddyName").value.trim());
+      lines.push("Relationship: " + document.getElementById("buddyRelation").value.trim());
+      lines.push("In Support of: " + vetName);
+      lines.push("Condition: " + condition);
+      var howKnow = document.getElementById("buddyHowKnow").value.trim();
+      if (howKnow) {
+        lines.push("");
+        lines.push("How I Know the Veteran:");
+        lines.push(howKnow);
+      }
+    }
+
+    lines.push("");
+    lines.push("─".repeat(40));
+
+    if (state.focusAreas.indexOf("onset") !== -1) {
+      lines.push("");
+      lines.push(document.getElementById("onsetText").value.trim());
+    }
+
+    if (state.focusAreas.indexOf("continuity") !== -1) {
+      lines.push("");
+      lines.push(document.getElementById("continuityText").value.trim());
+    }
+
+    if (state.focusAreas.indexOf("severity") !== -1) {
+      lines.push("");
+      lines.push(document.getElementById("severityText").value.trim());
+    }
+
+    lines.push("");
+    lines.push("─".repeat(40));
+    lines.push("");
+    lines.push("I certify that the statements above are true and correct to the best of my knowledge and belief.");
+
+    state.reviewText = lines.join("\n");
+    document.getElementById("reviewContent").textContent = state.reviewText;
+
+    // Reset AI state when rebuilding
+    document.getElementById("aiResult").style.display = "none";
+    document.getElementById("aiLoading").style.display = "";
+    document.getElementById("aiOutput").style.display = "none";
+    document.getElementById("aiPolishBtn").disabled = false;
+    state.aiPolishedText = null;
+  }
+
+  // AI Polish
+  window.aiPolish = function() {
+    if (!window.Poe || !window.Poe.sendUserMessage) {
+      showModal("AI Unavailable", "The AI writing assistant is only available when this app is running on the Poe platform.");
+      return;
+    }
+
+    document.getElementById("aiResult").style.display = "block";
+    document.getElementById("aiLoading").style.display = "";
+    document.getElementById("aiOutput").style.display = "none";
+    document.getElementById("aiPolishBtn").disabled = true;
+
+    var typeLabel = state.type === "lay" ? "Lay Statement" : "Buddy Statement";
+    var prompt = "You are an expert at helping veterans write powerful VA disability claim statements. " +
+      "Below is a draft " + typeLabel + " for a VA disability claim. " +
+      "Please improve the clarity, specificity, and persuasiveness of this statement while: " +
+      "1) Keeping the writer's authentic voice and story\n" +
+      "2) Never changing or adding facts\n" +
+      "3) Making details more specific where possible\n" +
+      "4) Ensuring it addresses onset, continuity, and/or severity effectively\n" +
+      "5) Keeping the tone honest and accurate (not exaggerated)\n\n" +
+      "Return ONLY the improved statement text, nothing else. Do not add any headers, footers, explanations, or commentary.\n\n" +
+      "DRAFT STATEMENT:\n" + state.reviewText;
+
+    window.Poe.registerHandler("ai-polish-handler", function(result) {
+      var msg = result.responses[0];
+      if (msg.status === "error") {
+        document.getElementById("aiLoading").style.display = "none";
+        document.getElementById("aiOutput").style.display = "block";
+        document.getElementById("aiText").textContent = "Sorry, something went wrong. You can continue with your original statement.";
+        document.getElementById("aiPolishBtn").disabled = false;
+      } else if (msg.status === "incomplete") {
+        document.getElementById("aiLoading").style.display = "none";
+        document.getElementById("aiOutput").style.display = "block";
+        document.getElementById("aiText").textContent = msg.content;
+      } else if (msg.status === "complete") {
+        document.getElementById("aiLoading").style.display = "none";
+        document.getElementById("aiOutput").style.display = "block";
+        state.aiPolishedText = msg.content;
+        document.getElementById("aiText").textContent = msg.content;
+      }
+    });
+
+    window.Poe.sendUserMessage("@Claude-Sonnet-4.5 " + prompt, {
+      handler: "ai-polish-handler",
+      stream: true,
+      openChat: false,
+      parameters: {}
+    }).catch(function(err) {
+      document.getElementById("aiLoading").style.display = "none";
+      document.getElementById("aiOutput").style.display = "block";
+      document.getElementById("aiText").textContent = "Could not reach the AI assistant. You can continue with your original statement.";
+      document.getElementById("aiPolishBtn").disabled = false;
+    });
+  };
+
+  window.acceptAI = function() {
+    if (state.aiPolishedText) {
+      state.reviewText = state.aiPolishedText;
+      document.getElementById("reviewContent").textContent = state.reviewText;
+      showToast("AI version applied!");
+    }
+  };
+
+  window.rejectAI = function() {
+    document.getElementById("aiResult").style.display = "none";
+    document.getElementById("aiPolishBtn").disabled = false;
+    showToast("Keeping your original.");
+  };
+
+  // Signature Canvas
+  var sigCanvas, sigCtx, sigDrawing = false;
+
+  function initSignature() {
+    sigCanvas = document.getElementById("sigCanvas");
+    sigCtx = sigCanvas.getContext("2d");
+    var area = document.getElementById("sigArea");
+    sigCanvas.width = area.offsetWidth;
+    sigCanvas.height = 180;
+    sigCtx.strokeStyle = "#1a1a1a";
+    sigCtx.lineWidth = 2.5;
+    sigCtx.lineCap = "round";
+    sigCtx.lineJoin = "round";
+
+    sigCanvas.removeEventListener("pointerdown", sigStart);
+    sigCanvas.removeEventListener("pointermove", sigMove);
+    sigCanvas.removeEventListener("pointerup", sigEnd);
+    sigCanvas.removeEventListener("pointerleave", sigEnd);
+
+    sigCanvas.addEventListener("pointerdown", sigStart);
+    sigCanvas.addEventListener("pointermove", sigMove);
+    sigCanvas.addEventListener("pointerup", sigEnd);
+    sigCanvas.addEventListener("pointerleave", sigEnd);
+  }
+
+  function getCanvasPos(e) {
+    var rect = sigCanvas.getBoundingClientRect();
+    return {
+      x: (e.clientX - rect.left) * (sigCanvas.width / rect.width),
+      y: (e.clientY - rect.top) * (sigCanvas.height / rect.height)
+    };
+  }
+
+  function sigStart(e) {
+    e.preventDefault();
+    sigDrawing = true;
+    var pos = getCanvasPos(e);
+    sigCtx.beginPath();
+    sigCtx.moveTo(pos.x, pos.y);
+    document.getElementById("sigPlaceholder").classList.add("hidden");
+    state.hasSigned = true;
+  }
+
+  function sigMove(e) {
+    if (!sigDrawing) { return; }
+    e.preventDefault();
+    var pos = getCanvasPos(e);
+    sigCtx.lineTo(pos.x, pos.y);
+    sigCtx.stroke();
+  }
+
+  function sigEnd(e) {
+    if (sigDrawing) {
+      e.preventDefault();
+      sigDrawing = false;
+      state.signatureData = sigCanvas.toDataURL("image/png");
+    }
+  }
+
+  window.clearSignature = function() {
+    if (sigCanvas && sigCtx) {
+      sigCtx.clearRect(0, 0, sigCanvas.width, sigCanvas.height);
+    }
+    state.hasSigned = false;
+    state.signatureData = null;
+    document.getElementById("sigPlaceholder").classList.remove("hidden");
+  };
+
+  function prefillSign() {
+    var nameField = document.getElementById("sigPrintName");
+    if (!nameField.value) {
+      if (state.type === "lay") {
+        nameField.value = document.getElementById("layVetName").value.trim();
+      } else {
+        nameField.value = document.getElementById("buddyName").value.trim();
+      }
+    }
+    var dateField = document.getElementById("sigDate");
+    if (!dateField.value) {
+      var today = new Date();
+      var y = today.getFullYear();
+      var m = String(today.getMonth() + 1).padStart(2, "0");
+      var d = String(today.getDate()).padStart(2, "0");
+      dateField.value = y + "-" + m + "-" + d;
+    }
+  }
+
+  // Build final statement
+  function buildFinalStatement() {
+    var printName = document.getElementById("sigPrintName").value.trim();
+    var sigDate = document.getElementById("sigDate").value;
+    var formatted = sigDate;
+    if (sigDate) {
+      var parts = sigDate.split("-");
+      if (parts.length === 3) {
+        formatted = parts[1] + "/" + parts[2] + "/" + parts[0];
+      }
+    }
+
+    var final = state.reviewText + "\n\n\n";
+    final += "Signature: [Signed Electronically]\n";
+    final += "Printed Name: " + printName + "\n";
+    final += "Date: " + formatted + "\n";
+
+    return final;
+  }
+
+  // Download
+  window.downloadStatement = function() {
+    var text = buildFinalStatement();
+    var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+
+    var typeLabel = state.type === "lay" ? "Lay" : "Buddy";
+    var vetName = state.type === "lay"
+      ? document.getElementById("layVetName").value.trim()
+      : document.getElementById("buddyVetName").value.trim();
+    var safeName = vetName.replace(/[^a-zA-Z0-9]/g, "_");
+    var filename = typeLabel + "_Statement_" + safeName + ".txt";
+
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast("Statement downloaded!");
+  };
+
+  // Copy
+  window.copyStatement = function() {
+    var text = buildFinalStatement();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() {
+        showToast("Copied to clipboard!");
+      });
+    }
+  };
+
+  // Start over
+  window.startOver = function() {
+    state.type = null;
+    state.currentStep = "0";
+    state.focusAreas = [];
+    state.aiPolishedText = null;
+    state.signatureData = null;
+    state.hasSigned = false;
+
+    // Clear form fields
+    var inputs = document.querySelectorAll(".form-input, .form-textarea, .form-select");
+    inputs.forEach(function(el) {
+      if (el.type === "date" || el.tagName === "SELECT") {
+        el.value = "";
+      } else {
+        el.value = "";
+      }
+    });
+    var checks = document.querySelectorAll("input[type='checkbox']");
+    checks.forEach(function(cb) {
+      cb.checked = false;
+      cb.closest(".checkbox-item").classList.remove("checked");
+    });
+
+    showStep("0");
+  };
+
+})();
+</script>
+
+
+</body></html>
